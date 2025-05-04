@@ -1,0 +1,68 @@
+local UserInputService = game:GetService("UserInputService")
+local screenGui = Instance.new("ScreenGui")
+local frame = Instance.new("Frame")
+local textLabel1 = Instance.new("TextLabel")
+local textLabel2 = Instance.new("TextLabel")
+local uiCorner = Instance.new("UICorner")
+local UIstroke  = Instance.new("UIStroke")
+local Button1 = Instance.new("TextButton")
+local uiCorner1 = Instance.new("UICorner")
+
+frame.BackgroundTransparency = 0.2
+frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+frame.Size = UDim2.new(0, 370, 0, 150)
+frame.Position = UDim2.new(0.5, -185, 0.5, -53.5)
+UIstroke.Thickness = 1
+UIstroke.Color = Color3.fromRGB(255, 255, 255)
+UIstroke.Parent = frame
+uiCorner.Parent = frame
+uiCorner.CornerRadius = UDim.new(0.1, 8)
+
+Button1.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button1.Text = "Close"
+uiCorner1.Parent = Button1
+Button1.Parent = frame
+Button1.Size = UDim2.new(0.9, 0, 0.2, 0)
+Button1.Position = UDim2.new(0.05, 0, 0.75, 0)
+Button1.TextScaled = true
+Button1.Name = "Button1"
+Button1.FontFace = Font.fromEnum(Enum.Font.FredokaOne)
+uiCorner1.CornerRadius = UDim.new(0.2, 8)
+
+textLabel1.BackgroundTransparency = 1
+textLabel1.TextColor3 = Color3.fromRGB(255, 255, 255)
+textLabel1.Size = UDim2.new(1, 0, 0.5, 0)
+textLabel1.Position = UDim2.new(0, 0, 0, 0)
+textLabel1.Text = "The script uses a WhiteList, write in The Lite Discord, or join the server."
+textLabel1.Parent = frame
+textLabel1.TextScaled = true
+textLabel1.FontFace = Font.fromEnum(Enum.Font.FredokaOne)
+
+textLabel2.BackgroundTransparency = 1
+textLabel2.TextColor3 = Color3.fromRGB(255, 255, 255)
+textLabel2.Size = UDim2.new(0.8, 0, 0.2, 0)
+textLabel2.Position = UDim2.new(0.1, 0, 0.5, 0)
+textLabel2.Text = "gg/tuhaK8Ds5be"
+textLabel2.Name = "Text2"
+textLabel2.Parent = frame
+textLabel2.TextScaled = true
+
+screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+frame.Parent = screenGui
+
+local Button1 = frame:WaitForChild("Button1")
+
+local textToCopy = "https://discord.gg/tuhaK8Ds5be"
+
+Button1.MouseButton1Click:Connect(function()
+	local success, err = pcall(function()
+		UserInputService:SetClipboardAsync(textToCopy)
+	end)
+
+	if success then
+		screenGui.Enabled = false
+	else
+		screenGui.Enabled = false
+	end
+end)
