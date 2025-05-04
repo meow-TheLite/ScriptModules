@@ -24,21 +24,21 @@ local ButtonTab = ScriptsTab:CreateButton({
 local ButtonTab = ScriptsTab:CreateButton({
    Name = "AntiAfk",
    Callback = function()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/luca5432/Roblox-ANTI-AFK-SCRIPT/refs/heads/main/Script"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/AntiAfkModule"))()
    end,
 })
 
 local ButtonTab = ScriptsTab:CreateButton({
    Name = "Gemtoki Auto Gem Collect: Keybind X",
    Callback = function()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/meow-TheLite/Test/refs/heads/main/gemtokiAutogems"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/GemtokiModule"))()
    end,
 })
 
 local ButtonTab = ScriptsTab:CreateButton({
    Name = "Better Rap and Gems",
    Callback = function()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/meow-TheLite/Test/refs/heads/main/BetterRapGems"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/RapModule"))()
    end,
 })
 
@@ -52,7 +52,7 @@ local ButtonTab = ScriptsTab:CreateButton({
 local ButtonTab = ScriptsTab:CreateButton({
    Name = "Button Viewer",
    Callback = function()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/meow-TheLite/Test/refs/heads/main/Buttonviewer"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/ViewerModule"))()
    end,
 })
 
