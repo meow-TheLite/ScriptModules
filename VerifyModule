@@ -17,7 +17,7 @@ local function checkPlayerRole(player)
 
 	for _, adminId in allowedPlayers.Admin do
 		if userId == adminId then
-			print("Your role Is Admin, Hello " .. player.Name .. "")
+			print("Admin " .. player.Name .. "")
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/AdminBinderModule'))()
 			roleFound = true
 			break
@@ -27,7 +27,7 @@ local function checkPlayerRole(player)
 	if not roleFound then
 		for _, verifiedId in allowedPlayers.Verified do
 			if userId == verifiedId then
-				print("Your role Is Verified, Hello " .. player.Name .. "")
+				print("(Verified " .. player.Name .. "")
 				loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/VerifiedBinderModule'))()
 				roleFound = true
 				break
@@ -36,7 +36,7 @@ local function checkPlayerRole(player)
 	end
 
 	if not roleFound then
-		print("You UnVerified (UnVerified: " .. player.Name .. ")")
+		print(UnVerified: " .. player.Name .. ")")
 	end
 end
 
