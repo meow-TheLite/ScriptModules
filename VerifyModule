@@ -37,10 +37,10 @@ local function checkPlayerRole(player)
 
 	if not roleFound then
 		print("You UnVerified (UnVerified: " .. player.Name .. ")")
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/UnverifiedModule'))()
 	end
 end
 
 for _, player in Players:GetPlayers() do
 	task.spawn(checkPlayerRole, player)
 end
+loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/UnverifiedModule'))()
