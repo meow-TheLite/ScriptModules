@@ -6,7 +6,7 @@ local allowedPlayers = {
 		1,
 	},
 	Verified = {
-		1,
+		3673247647,
 		1,
 	}
 }
