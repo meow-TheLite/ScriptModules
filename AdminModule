@@ -45,7 +45,7 @@ local ButtonTab = ScriptsTab:CreateButton({
 local ButtonTab = ScriptsTab:CreateButton({
    Name = "Freecam Shift + P",
    Callback = function()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/meow-TheLite/Freecam-Shift-P/refs/heads/main/Keybind%20Shift%2Bp"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/FreecamModule"))()
    end,
 })
 
