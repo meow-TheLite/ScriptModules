@@ -1,47 +1,23 @@
 local Players = game:GetService("Players")
-print("VerifyModule Loading")
+local LocalPlayer = Players.LocalPlayer
 
-local allowedPlayers = {
-	Admin = {
-		5735989937,
-		1,
-	},
-	Verified = {
-		3673247647,
-		1,
-	}
+local UserRoles = {
+	[5735989937] = "Admin",
+	[3673247647] = "Verified"
 }
 
-local function checkPlayerRole(player)
-	local userId = player.UserId
-	local roleFound = false
+local userId = LocalPlayer.UserId
+local username = LocalPlayer.Name
 
-	for _, adminId in allowedPlayers.Admin do
-		if userId == adminId then
-			print("(Admin: " .. player.Name .. ")")
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/AdminBinderModule'))()
-			roleFound = true
-			break
-		end
-	end
+local role = UserRoles[userId]
 
-	if not roleFound then
-		for _, verifiedId in allowedPlayers.Verified do
-			if userId == verifiedId then
-				print("(Verified: " .. player.Name .. ")")
-				loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/VerifiedBinderModule'))()
-				roleFound = true
-				break
-			end
-		end
-	end
-
-	if not roleFound then
-		print("(UnVerified: " .. player.Name .. ")")
-	end
+if role == "Admin" then
+	print("Admin: " .. username)
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/AdminBinderModule'))()
+elseif role == "Verified" then
+	print("Verified: " .. username)
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/VerifiedBinderModule'))()
+else
+	print("Unverified: " .. username)
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/UnverifiedModule'))()
 end
-
-for _, player in Players:GetPlayers() do
-	task.spawn(checkPlayerRole, player)
-end
-loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/UnverifiedModule'))()
