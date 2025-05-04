@@ -1,6 +1,5 @@
 local currentPlaceId = game.PlaceId
 print("Binds are Loading")
-wait(1)
 if currentPlaceId == 119260352090770 then
 	print("TradeBinds Loaded")
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/RapModule"))()
