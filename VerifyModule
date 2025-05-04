@@ -1,0 +1,46 @@
+local Players = game:GetService("Players")
+
+local allowedPlayers = {
+	Admin = {
+		5735989937,
+		1,
+	},
+	Verified = {
+		1,
+		1,
+	}
+}
+
+local function checkPlayerRole(player)
+	local userId = player.UserId
+	local roleFound = false
+
+	for _, adminId in allowedPlayers.Admin do
+		if userId == adminId then
+			print("Your role Is Admin, Hello " .. player.Name .. "")
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/AdminModule'))()
+			roleFound = true
+			break
+		end
+	end
+
+	if not roleFound then
+		for _, verifiedId in allowedPlayers.Verified do
+			if userId == verifiedId then
+				print("Your role Is Verified, Hello " .. player.Name .. "")
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/VerifiedModule'))()
+				roleFound = true
+				break
+			end
+		end
+	end
+
+	if not roleFound then
+		print("You UnVerified (UnVerified: " .. player.Name .. ")")
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/UnverifiedModule'))()
+	end
+end
+
+for _, player in Players:GetPlayers() do
+	task.spawn(checkPlayerRole, player)
+end
