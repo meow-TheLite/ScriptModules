@@ -1,0 +1,93 @@
+local DiscordLib =
+    loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
+
+local win = DiscordLib:Window("TheLiteDev")
+
+local serv = win:Server("Main", "")
+
+local btns = serv:Channel("Tools")
+
+btns:Button(
+    "Invisible",
+    function()
+        DiscordLib:Notification("Notification", "Keybind G, DONT DASH IN IVIS", "Okay!")
+		loadstring(game:HttpGet('https://pastebin.com/raw/3Rnd9rHf'))()
+    end
+)
+
+btns:Button(
+    "Infinity yeld",
+    function()
+        DiscordLib:Notification("Notification", "Its a very Good script)", "Okay!")
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    end
+)
+
+btns:Button(
+    "Dex Explorer v4",
+    function()
+        DiscordLib:Notification("Notification", "Watch game files and finds bugs", "Okay!")
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/nuIIism/scripts/main/dex.lua"))()
+    end
+)
+
+btns:Button(
+    "AntiAFK",
+    function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/luca5432/Roblox-ANTI-AFK-SCRIPT/refs/heads/main/Script"))()
+    end
+)
+
+btns:Button(
+    "Copy Game to Exploit Workspace",
+    function()
+        DiscordLib:Notification("Notification", "Warning this tool download place to you PC", "Okay!")
+		saveinstance({decomptype = new})
+		Saveinstance()
+    end
+)
+
+btns:Button(
+    "Freecam Shift+p",
+    function()
+        DiscordLib:Notification("Notification", "KEYBIND SHIFT+P", "Okay!")
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/meow-TheLite/Freecam-Shift-P/refs/heads/main/Keybind%20Shift%2Bp"))()
+    end
+)
+
+btns:Button(
+    "Button Viewer",
+    function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/meow-TheLite/Test/refs/heads/main/Buttonviewer"))()
+    end
+)
+
+btns:Button(
+    "Visual",
+    function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/meow-TheLite/Test/refs/heads/main/LightScript"))()
+    end
+)
+
+btns:Button(
+    "Gemtoki Auto Gemm Collect",
+    function()
+	DiscordLib:Notification("Notification", "Keybind X", "Okay!")
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/meow-TheLite/Test/refs/heads/main/gemtokiAutogems"))()
+    end
+)
+
+btns:Button(
+    "Better Rap and Gems",
+    function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/meow-TheLite/Test/refs/heads/main/BetterRapGems"))()
+    end
+)
+
+local lbls = serv:Channel("Helps")
+
+lbls:Label("Keybinds")
+lbls:Label("INVISIBLE, Keybind G")
+lbls:Label("Freecam Shift + P")
+lbls:Label("Gemtoki Auto Keybind X")
+lbls:Label("UPDATE COMING SOON")
