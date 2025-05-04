@@ -4,7 +4,7 @@ wait(1)
 if currentPlaceId == 15346670220 then
 	print("TradeBinds Loaded")
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/RapModule"))()
-elseif currentPlaceId == 15410160852 then
+elseif currentPlaceId == 93356278413249 then
 	print("BossBinds Loaded")
 	loadstring(game:HttpGet('https://pastebin.com/raw/3Rnd9rHf'))()
 else
