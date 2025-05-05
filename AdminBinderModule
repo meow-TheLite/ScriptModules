@@ -6,7 +6,7 @@ if currentPlaceId == 119260352090770 then
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/RapModule"))()
 elseif currentPlaceId == 93356278413249 then
 	print("BossBinds Loaded")
-	loadstring(game:HttpGet('https://pastebin.com/raw/3Rnd9rHf'))()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/AfkBossBinderModule'))()
 else
 	print("There are no bindings for this Placeid")
 end
