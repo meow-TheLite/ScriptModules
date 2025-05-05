@@ -1,3 +1,4 @@
+loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/VerifiedModule'))()
 local currentPlaceId = game.PlaceId
 print("Binds are Loading")
 if currentPlaceId == 119260352090770 then
@@ -9,4 +10,3 @@ elseif currentPlaceId == 93356278413249 then
 else
 	print("There are no bindings for this Placeid")
 end
-loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/VerifiedModule'))()
