@@ -1,0 +1,13 @@
+local Players = game:GetService("Players")
+local Workspace = game:GetService("Workspace")
+local spawnPoint = game.Workspace.SpawnLocation
+
+while true do
+    local part = Workspace:WaitForChild("Part")
+
+    for _, player in ipairs(Players:GetPlayers()) do
+        player.Character:MoveTo(spawnPoint.Position)
+    end
+
+    part.AncestryChanged:Wait()
+end
