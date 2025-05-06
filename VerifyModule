@@ -8,7 +8,8 @@ local UserRoles = {
 	[4576621361] = "Verified",
 	[1524284507] = "Verified",
 	[7330183875] = "Verified",
-	[7043031523] = "Verified"
+	[7043031523] = "Verified",
+	[1110085936] = "Verified"
 }
 
 local userId = LocalPlayer.UserId
