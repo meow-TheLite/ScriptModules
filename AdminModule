@@ -1,4 +1,5 @@
 print("Loading Scripts")
+print("Version V0.4 [BETA]")
 local Lighting = game:GetService("Lighting")
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
