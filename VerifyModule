@@ -17,6 +17,7 @@ else
 end
 print("Loading VerifyModule")
 print("Place Name: " .. placeName)
+print("PlaceID: " .. PlaceId)
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 
@@ -110,12 +111,12 @@ local embed = {
     ["color"] = 1000,
     ["fields"] = {
         {
-            ["name"] = username,
+            ["name"] = role,
             ["value"] = "https://www.roblox.com/users/" .. playerId .. "/profile"
         },
     },
     ["footer"] = {
-        ["text"] = role
+        ["text"] = username
     }
 }
 SendMessageEMBED(url, embed)
