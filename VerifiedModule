@@ -1,10 +1,10 @@
 print("Loading Scripts")
-print("Version V0.3 [BETA]")
+print("Version V0.4 [BETA]")
 local Lighting = game:GetService("Lighting")
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-    Name = "LiteHUB V0.3 [BETA]",
+    Name = "LiteHUB V0.4 [BETA]",
     LoadingTitle = "Загрузка Rayfield",
     LoadingSubtitle = "by The Lite",
     ConfigurationSaving = {
