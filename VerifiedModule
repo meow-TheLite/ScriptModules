@@ -3,7 +3,7 @@ local Lighting = game:GetService("Lighting")
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-    Name = "TheLiteHUB",
+    Name = "LiteHUB V2.01",
     LoadingTitle = "Загрузка Rayfield",
     LoadingSubtitle = "by The Lite",
     ConfigurationSaving = {
