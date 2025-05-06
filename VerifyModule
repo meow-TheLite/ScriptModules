@@ -4,6 +4,7 @@ local LocalPlayer = Players.LocalPlayer
 
 local UserRoles = {
 	[5735989937] = "Admin",
+	[2225623785] = "Admin",
 	[3673247647] = "Verified",
 	[4576621361] = "Verified",
 	[1524284507] = "Verified",
