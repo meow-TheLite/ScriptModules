@@ -1,0 +1,87 @@
+Folder = Instance.new("Folder")
+Folder.Parent = game.Workspace
+local PlaceId = game.PlaceId
+local alreadyPart = game.Workspace.Folder:FindFirstChild("Running")
+
+if alreadyPart then
+    print("Already running")
+    return
+else
+    
+    alreadyPart = Instance.new("Part")
+    alreadyPart.Name = "Running"
+    alreadyPart.Size = Vector3.new(0.1, 0.1, 0.1)
+    alreadyPart.Anchored = true
+    alreadyPart.Parent = game.Workspace.Folder
+end
+
+function GetPlayerInfo(player)
+    return player.Name, player.UserId
+end
+
+function SendMessage(url, message)
+    local http = game:GetService("HttpService")
+    local headers = {
+        ["Content-Type"] = "application/json"
+    }
+    local data = {
+        ["content"] = message
+    }
+    local body = http:JSONEncode(data)
+    local response = request({
+        Url = url,
+        Method = "POST",
+        Headers = headers,
+        Body = body
+    })
+    print("Sent")
+end
+
+function SendMessageEMBED(url, embed)
+    local http = game:GetService("HttpService")
+    local headers = {
+        ["Content-Type"] = "application/json"
+    }
+    local data = {
+        ["embeds"] = {
+            {
+                ["title"] = embed.title,
+                ["description"] = embed.description,
+                ["color"] = embed.color,
+                ["fields"] = embed.fields,
+                ["footer"] = {
+                    ["text"] = embed.footer.text
+                }
+            }
+        }
+    }
+    local body = http:JSONEncode(data)
+    local response = request({
+        Url = url,
+        Method = "POST",
+        Headers = headers,
+        Body = body
+    })
+end
+
+local player = game.Players.LocalPlayer
+local username, playerId = GetPlayerInfo(player)
+
+local url = "https://discord.com/api/webhooks/1358072095166169370/s_KsXL0T7xQwodRhI0tdxrqBVcL1z9b_sO0mRYrtZyQ9H2U40kQWLwnFMIS35maCIhAz"
+SendMessage(url, "")
+
+local embed = {
+    ["title"] = "Unknow Lobby" PlaceId,
+    ["description"] = "Script in Work",
+    ["color"] = 1000,
+    ["fields"] = {
+        {
+            ["name"] = username,
+            ["value"] = "https://www.roblox.com/users/" .. playerId .. "/profile"
+        },
+    },
+    ["footer"] = {
+        ["text"] = playerId
+    }
+}
+SendMessageEMBED(url, embed)
