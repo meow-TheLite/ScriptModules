@@ -1,7 +1,7 @@
 local alreadyPart = game.Workspace.SecureFolder:FindFirstChild("InvisibleRunning")
 
 if alreadyPart then
-    print("InvisibleRunning Already running")
+    print("Invisible Already running")
     return
 else
     
