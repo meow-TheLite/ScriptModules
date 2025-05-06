@@ -1,3 +1,16 @@
+local alreadyPart = game.Workspace.SecureFolder:FindFirstChild("FreecamRunning")
+
+if alreadyPart then
+    print("Freeecam Already running")
+    return
+else
+    
+    alreadyPart = Instance.new("Part")
+    alreadyPart.Name = "FreecamRunning"
+    alreadyPart.Size = Vector3.new(0.1, 0.1, 0.1)
+    alreadyPart.Anchored = true
+    alreadyPart.Parent = game.Workspace.SecureFolder
+end
 function sandbox(var,func)
 local env = getfenv(func)
 local newenv = setmetatable({},{
