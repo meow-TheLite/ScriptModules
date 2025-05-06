@@ -38,13 +38,6 @@ local ButtonTab = ScriptsTab:CreateButton({
 })
 
 local ButtonTab = ScriptsTab:CreateButton({
-   Name = "Better Rap and Gems",
-   Callback = function()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/RapModule"))()
-   end,
-})
-
-local ButtonTab = ScriptsTab:CreateButton({
    Name = "Freecam Shift + P",
    Callback = function()
   loadstring(game:HttpGet("https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/FreecamModule"))()
