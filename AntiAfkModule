@@ -1,3 +1,16 @@
+local alreadyPart = game.Workspace.SecureFolder:FindFirstChild("AfkRunning")
+
+if alreadyPart then
+    print("AntiAfk Already running")
+    return
+else
+    
+    alreadyPart = Instance.new("Part")
+    alreadyPart.Name = "AfkRunning"
+    alreadyPart.Size = Vector3.new(0.1, 0.1, 0.1)
+    alreadyPart.Anchored = true
+    alreadyPart.Parent = game.Workspace.SecureFolder
+end
 wait(0.5)local ba=Instance.new("ScreenGui")
 local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
 local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
