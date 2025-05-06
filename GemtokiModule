@@ -1,6 +1,18 @@
+local alreadyPart = game.Workspace.SecureFolder:FindFirstChild("GemtokiRunning")
 local UserInputService = game:GetService("UserInputService")
 local player = game.Players.LocalPlayer
 
+if alreadyPart then
+    print("AutoGemtokiModule Already running")
+    return
+else
+    
+    alreadyPart = Instance.new("Part")
+    alreadyPart.Name = "GemtokiRunning"
+    alreadyPart.Size = Vector3.new(0.1, 0.1, 0.1)
+    alreadyPart.Anchored = true
+    alreadyPart.Parent = game.Workspace.SecureFolder
+end
 if player.Character then
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
