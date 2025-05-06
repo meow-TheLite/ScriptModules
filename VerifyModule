@@ -1,19 +1,20 @@
 local placeName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 Folder = Instance.new("Folder")
 Folder.Parent = game.Workspace
+Folder.Name = "SecureFolder"
 local PlaceId = game.PlaceId
-local alreadyPart = game.Workspace.Folder:FindFirstChild("Running")
+local alreadyPart = game.Workspace.SecureFolder:FindFirstChild("LiteHubRunning")
 
 if alreadyPart then
-    print("Already running")
+    print("LiteHub Already running")
     return
 else
     
     alreadyPart = Instance.new("Part")
-    alreadyPart.Name = "Running"
+    alreadyPart.Name = "LiteHubRunning"
     alreadyPart.Size = Vector3.new(0.1, 0.1, 0.1)
     alreadyPart.Anchored = true
-    alreadyPart.Parent = game.Workspace.Folder
+    alreadyPart.Parent = game.Workspace.SecureFolder
 end
 print("Loading VerifyModule")
 print("Place Name: " .. placeName)
