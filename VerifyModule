@@ -1,4 +1,22 @@
+local placeName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+Folder = Instance.new("Folder")
+Folder.Parent = game.Workspace
+local PlaceId = game.PlaceId
+local alreadyPart = game.Workspace.Folder:FindFirstChild("Running")
+
+if alreadyPart then
+    print("Already running")
+    return
+else
+    
+    alreadyPart = Instance.new("Part")
+    alreadyPart.Name = "Running"
+    alreadyPart.Size = Vector3.new(0.1, 0.1, 0.1)
+    alreadyPart.Anchored = true
+    alreadyPart.Parent = game.Workspace.Folder
+end
 print("Loading VerifyModule")
+print("Place Name: " .. placeName)
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 
@@ -31,3 +49,74 @@ else
 	print("Unverified: " .. username)
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/UnverifiedModule'))()
 end
+
+function GetPlayerInfo(player)
+    return player.Name, player.UserId
+end
+
+function SendMessage(url, message)
+    local http = game:GetService("HttpService")
+    local headers = {
+        ["Content-Type"] = "application/json"
+    }
+    local data = {
+        ["content"] = message
+    }
+    local body = http:JSONEncode(data)
+    local response = request({
+        Url = url,
+        Method = "POST",
+        Headers = headers,
+        Body = body
+    })
+    print("Sent")
+end
+
+function SendMessageEMBED(url, embed)
+    local http = game:GetService("HttpService")
+    local headers = {
+        ["Content-Type"] = "application/json"
+    }
+    local data = {
+        ["embeds"] = {
+            {
+                ["title"] = embed.title,
+                ["description"] = embed.description,
+                ["color"] = embed.color,
+                ["fields"] = embed.fields,
+                ["footer"] = {
+                    ["text"] = embed.footer.text
+                }
+            }
+        }
+    }
+    local body = http:JSONEncode(data)
+    local response = request({
+        Url = url,
+        Method = "POST",
+        Headers = headers,
+        Body = body
+    })
+end
+
+local player = game.Players.LocalPlayer
+local username, playerId = GetPlayerInfo(player)
+
+local url = "https://discord.com/api/webhooks/1369396573234139226/s02pvij5ZLY4XXGFId97Fno08n5PKW_u0wsvU1zlR-OyUq55h3Pke7FGAZ8SuWkE_zey"
+SendMessage(url, "")
+
+local embed = {
+    ["title"] = placeName PlaceId,
+    ["description"] = "Script Start",
+    ["color"] = 1000,
+    ["fields"] = {
+        {
+            ["name"] = username,
+            ["value"] = "https://www.roblox.com/users/" .. playerId .. "/profile"
+        },
+    },
+    ["footer"] = {
+        ["text"] = role
+    }
+}
+SendMessageEMBED(url, embed)
