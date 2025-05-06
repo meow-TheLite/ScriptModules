@@ -1,0 +1,33 @@
+print("Loading VerifyModule")
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local UserRoles = {
+	[5735989937] = "Admin",
+	[2225623785] = "Admin",
+	[3673247647] = "Verified",
+	[4576621361] = "Verified",
+	[1524284507] = "Verified",
+	[7330183875] = "Verified",
+	[7043031523] = "Verified",
+	[1110085936] = "Verified",
+	[4394044428] = "Verified",
+	[1582477556] = "Verified",
+	[4410702048] = "Verified"
+}
+
+local userId = LocalPlayer.UserId
+local username = LocalPlayer.Name
+
+local role = UserRoles[userId]
+
+if role == "Admin" then
+	print("Admin: " .. username)
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/AdminBinderModule'))()
+elseif role == "Verified" then
+	print("Verified: " .. username)
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/VerifiedBinderModule'))()
+else
+	print("Unverified: " .. username)
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/UnverifiedModule'))()
+end
