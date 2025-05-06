@@ -2,12 +2,12 @@ local currentPlaceId = game.PlaceId
 print("Binds are Loading")
 if currentPlaceId == 119260352090770 then
 	print("TradeBinds Loaded")
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/AdminModule'))()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/RapModule"))()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/AdminModule'))()
 elseif currentPlaceId == 93356278413249 then
 	print("BossBinds Loaded")
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/AdminModule'))()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/AfkBossBinderModule'))()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/AdminModule'))()
 else
 	print("There are no bindings for this Placeid")
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/meow-TheLite/ScriptModules/refs/heads/main/AdminModule'))()
