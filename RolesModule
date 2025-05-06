@@ -1,12 +1,10 @@
-local UserRoles = {
-	[5735989937] = "Admin",
-  [1] = "Admin",
-  [1] = "Admin",
-  [1] = "Admin",
-  [1] = "Admin",
-	[1] = "Verified",
-  [1] = "Verified",
-  [1] = "Verified",
-  [1] = "Verified",
-  [1] = "Verified"
-}
+[5735989937] = "Admin",
+[1] = "Admin",
+[1] = "Admin",
+[1] = "Admin",
+[1] = "Admin",
+[1] = "Verified",
+[1] = "Verified",
+[1] = "Verified",
+[1] = "Verified",
+[1] = "Verified"
