@@ -34,7 +34,6 @@ local UserRoles = {
 	[4394044428] = "Verified",--DiscordId: 628969722150387714
 	[1582477556] = "Verified",--DiscordId: 691294229892431883
 	[4410702048] = "Verified" --DiscordId: 534071100943106098
-	[869877331] = "Verified" --DiscordId: 682552707533242388
 }
 
 local userId = LocalPlayer.UserId
