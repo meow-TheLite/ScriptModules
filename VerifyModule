@@ -23,17 +23,7 @@ local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 
 local UserRoles = {
-	[5735989937] = "Admin",
-	[2225623785] = "Admin",
-	[3673247647] = "Verified",--DiscordId: 933795972855775272
-	[4576621361] = "Verified",--DiscordId: 866963176851111988
-	[1524284507] = "Verified",--DiscordId: 869136280162799646
-	[7330183875] = "Verified",--DiscordId: 1209060936388841555
-	[7043031523] = "Verified",--DiscordId: 419397819926052865
-	[1110085936] = "Verified",--DiscordId: 729271804161687562
-	[4394044428] = "Verified",--DiscordId: 628969722150387714
-	[1582477556] = "Verified",--DiscordId: 691294229892431883
-	[4410702048] = "Verified" --DiscordId: 534071100943106098
+	[5735989937] = "Admin"
 }
 
 local userId = LocalPlayer.UserId
